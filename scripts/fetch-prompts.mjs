@@ -28,6 +28,7 @@ async function fetchCN() {
     // const raw = await (await fetch(CN_URL)).json();
     // const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
     // const raw = await response.json();
+    console.log('123');
     const raw = fs.readFileSync(FILENew);
 
     return raw.map((v) => [v.act, v.prompt]);
