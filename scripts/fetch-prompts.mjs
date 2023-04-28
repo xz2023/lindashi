@@ -9,7 +9,6 @@ const CN_URL = MIRRORF_FILE_URL + RAW_CN_URL;
 const RAW_EN_URL = "f/awesome-chatgpt-prompts/main/prompts.csv";
 const EN_URL = MIRRORF_FILE_URL + RAW_EN_URL;
 const FILE = "./public/prompts.json";
-const FILENew = "./public/prompts-zh.json";
 
 const timeoutPromise = (timeout) => {
   return new Promise((resolve, reject) => {
@@ -23,14 +22,8 @@ async function fetchCN() {
   console.log("[Fetch] fetching cn prompts...");
   try {
     // const raw = await (await fetch(CN_URL)).json();
-    // const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
-    // const raw = await response.json();
-    // const raw = await (await fetch(CN_URL)).json();
-    // const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
-    // const raw = await response.json();
-    console.log('123');
-    const raw = fs.readFileSync(FILENew);
-
+    const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
+    const raw = await response.json();
     return raw.map((v) => [v.act, v.prompt]);
   } catch (error) {
     console.error("[Fetch] failed to fetch cn prompts", error);
