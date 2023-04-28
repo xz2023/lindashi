@@ -18,13 +18,41 @@ const timeoutPromise = (timeout) => {
   });
 };
 
+// async function fetchCN() {
+//   console.log("[Fetch] fetching cn prompts...");
+//   try {
+//     // const raw = await (await fetch(CN_URL)).json();
+//     const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
+//     const raw = await response.json();
+//     return raw.map((v) => [v.act, v.prompt]);
+//   } catch (error) {
+//     console.error("[Fetch] failed to fetch cn prompts", error);
+//     return [];
+//   }
+// }
+
 async function fetchCN() {
   console.log("[Fetch] fetching cn prompts...");
   try {
-    // const raw = await (await fetch(CN_URL)).json();
+    
     const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
     const raw = await response.json();
-    return raw.map((v) => [v.act, v.prompt]);
+    const directoryPath = './public/prompts-zh.json';
+    console.log('dir is 1- ',directoryPath)
+    
+    const files = fs.readdirSync(directoryPath);
+    const jsonFiles = files.filter(file => file.endsWith('.json'));
+    
+    const jsonData = jsonFiles.map(file => {
+      const filePath = `${directoryPath}/${file}`;
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
+    });
+    
+    console.log('zh-js-1',jsonData);
+    console.log('zh-1-',raw);
+    return jsonData.map((v) => [v.act, v.prompt]);
+    
   } catch (error) {
     console.error("[Fetch] failed to fetch cn prompts", error);
     return [];
@@ -37,6 +65,7 @@ async function fetchEN() {
     // const raw = await (await fetch(EN_URL)).text();
     const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
     const raw = await response.text();
+    console.log('en-1-',raw);
     return raw
       .split("\n")
       .slice(1)
