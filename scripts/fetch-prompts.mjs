@@ -60,7 +60,7 @@ async function fetchCN() {
 
 const jsonTemp = [
   {
-    "act": "担任雅思写作考官1",
+    "act": "扮演脱口秀演员",
     "prompt": "我想让你扮演一个脱口秀喜剧演员。我将为您提供一些与时事相关的话题，您将运用您的智慧、创造力和观察能力，根据这些话题创建一个例程。您还应该确保将个人轶事或经历融入日常活动中，以使其对观众更具相关性和吸引力。我的第一个请求是“我想要幽默地看待政治”。\n"
   },
   {
@@ -87,19 +87,19 @@ const jsonTemp = [
 async function fetchEN() {
   console.log("[Fetch] fetching en prompts...");
   try {
-    // const raw = await (await fetch(EN_URL)).text();
-    const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
-    const raw = await response.text();
-    console.log('en-1-',raw);
-    return raw
-      .split("\n")
-      .slice(1)
-      .map((v) => v.split('","').map((v) => v.replace('"', "")));
-  } catch (error) {
-    console.error("[Fetch] failed to fetch en prompts", error);
-    return [];
-  }
-}
+//     // const raw = await (await fetch(EN_URL)).text();
+//     const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
+//     const raw = await response.text();
+//     console.log('en-1-',raw);
+//     return raw
+//       .split("\n")
+//       .slice(1)
+//       .map((v) => v.split('","').map((v) => v.replace('"', "")));
+//   } catch (error) {
+//     console.error("[Fetch] failed to fetch en prompts", error);
+//     return [];
+//   }
+// }
 
 async function main() {
   Promise.all([fetchCN(), fetchEN()])
