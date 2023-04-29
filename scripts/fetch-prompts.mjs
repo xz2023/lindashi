@@ -87,19 +87,19 @@ const jsonTemp = [
 async function fetchEN() {
   console.log("[Fetch] fetching en prompts...");
   try {
-//     // const raw = await (await fetch(EN_URL)).text();
-//     const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
-//     const raw = await response.text();
-//     console.log('en-1-',raw);
-//     return raw
-//       .split("\n")
-//       .slice(1)
-//       .map((v) => v.split('","').map((v) => v.replace('"', "")));
-//   } catch (error) {
-//     console.error("[Fetch] failed to fetch en prompts", error);
-//     return [];
-//   }
-// }
+    // const raw = await (await fetch(EN_URL)).text();
+    const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
+    const raw = await response.text();
+    console.log('en-1-',raw);
+    return raw
+      .split("\n")
+      .slice(1)
+      .map((v) => v.split('","').map((v) => v.replace('"', "")));
+  } catch (error) {
+    console.error("[Fetch] failed to fetch en prompts", error);
+    return [];
+  }
+}
 
 async function main() {
   Promise.all([fetchCN(), fetchEN()])
