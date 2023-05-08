@@ -660,7 +660,8 @@ export function Chat() {
             !(message.preview || message.content.length === 0);
           const showTyping = message.preview || message.streaming;
 
-          return (
+          if(i>0){
+            return (
             <div
               key={i}
               className={
@@ -740,6 +741,7 @@ export function Chat() {
               </div>
             </div>
           );
+          }
         })}
       </div>
 
