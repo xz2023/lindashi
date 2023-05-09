@@ -32,7 +32,7 @@ const cn = {
     Send: "发送",
     Config: {
       Reset: "重置默认",
-      SaveAs: "另存为面具",
+      SaveAs: "另存为角色",
     },
   },
   Export: {
@@ -102,22 +102,22 @@ const cn = {
       SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     Mask: {
-      Title: "面具启动页",
-      SubTitle: "新建聊天时，展示面具启动页",
+      Title: "角色启动页",
+      SubTitle: "新建聊天时，展示角色启动页",
     },
     Prompt: {
       Disable: {
-        Title: "禁用提示词自动补全",
+        Title: "禁用魔法棒自动补全",
         SubTitle: "在输入框开头输入 / 即可触发自动补全",
       },
-      List: "自定义提示词列表",
+      List: "自定义魔法棒列表",
       ListCount: (builtin: number, custom: number) =>
         `内置 ${builtin} 条，用户定义 ${custom} 条`,
       Edit: "编辑",
       Modal: {
-        Title: "提示词列表",
+        Title: "魔法棒列表",
         Add: "增加一条",
-        Search: "搜索提示词",
+        Search: "搜索魔法棒",
       },
     },
     HistoryCount: {
@@ -188,11 +188,11 @@ const cn = {
     Name: "插件",
   },
   Mask: {
-    Name: "面具",
+    Name: "角色",
     Page: {
-      Title: "预设角色面具",
+      Title: "预设角色",
       SubTitle: (count: number) => `${count} 个预设角色定义`,
-      Search: "搜索角色面具",
+      Search: "搜索角色",
       Create: "新建",
     },
     Item: {
@@ -205,7 +205,7 @@ const cn = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
+        `编辑预设角色 ${readonly ? "（只读）" : ""}`,
       Download: "下载预设",
       Clone: "克隆预设",
     },
@@ -219,8 +219,8 @@ const cn = {
     Skip: "直接开始",
     NotShow: "不再展示",
     ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    Title: "挑选一个角色",
+    SubTitle: "现在开始，与角色背后的灵魂思维碰撞",
     More: "搜索更多",
   },
 };
