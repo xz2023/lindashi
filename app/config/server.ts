@@ -39,5 +39,6 @@ export const getServerSideConfig = () => {
     needCode: ACCESS_CODES.size > 0,
     proxyUrl: process.env.PROXY_URL,
     isVercel: !!process.env.VERCEL,
+    hideUserApiKey: !!process.env.HIDE_USER_API_KEY, //可能是作者隐藏用户自行填入API key的一些关键步骤2
   };
 };

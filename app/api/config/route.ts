@@ -8,6 +8,7 @@ const serverConfig = getServerSideConfig();
 // 警告！不要在这里写入任何敏感信息！
 const DANGER_CONFIG = {
   needCode: serverConfig.needCode,
+  hideUserApiKey: serverConfig.hideUserApiKey,  //可能是作者隐藏用户自行填入API key的一些关键步骤3
 };
 
 declare global {

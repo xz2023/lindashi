@@ -7,6 +7,8 @@ export interface AccessControlStore {
   token: string;
 
   needCode: boolean;
+  hideUserApiKey: boolean;  //可能是作者隐藏用户自行填入API key的一些关键步骤4 11行也是
+  openaiUrl: string;
 
   updateToken: (_: string) => void;
   updateCode: (_: string) => void;
@@ -23,6 +25,10 @@ export const useAccessStore = create<AccessControlStore>()(
       token: "",
       accessCode: "",
       needCode: true,
+      hideUserApiKey: false,   //可能是作者隐藏用户自行填入API key的一些关键步骤5 29行也是
+      openaiUrl: "/api/openai/",
+
+
       enabledAccessControl() {
         get().fetch();
 
