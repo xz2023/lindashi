@@ -25,7 +25,7 @@ export const useAccessStore = create<AccessControlStore>()(
       token: "",
       accessCode: "",
       needCode: true,
-      hideUserApiKey: false,   //可能是作者隐藏用户自行填入API key的一些关键步骤5 29行也是
+      hideUserApiKey: true, //false, (修改为true)  //可能是作者隐藏用户自行填入API key的一些关键步骤5 29行也是
       openaiUrl: "/api/openai/",
 
 
