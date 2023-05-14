@@ -414,7 +414,6 @@ export function Settings() {
             <></>
           )}
 
-        {!accessStore.hideUserApiKey ? (   //可能是作者隐藏用户自行填入API key的一些关键步骤1,506行还有一个回复空“null"
           <ListItem
             title={Locale.Settings.Token.Title}
             subTitle={Locale.Settings.Token.SubTitle}
@@ -428,7 +427,6 @@ export function Settings() {
               }}
             />
           </ListItem>
-        ) : null} 
 
           <ListItem
             title={Locale.Settings.Usage.Title}

@@ -7,7 +7,6 @@ declare global {
       CODE?: string;
       PROXY_URL?: string;
       VERCEL?: string;
-      HIDE_USER_API_KEY?: string; // disable user's api key input 禁止用户自行填入api key的步骤。可能是作者隐藏用户自行填入API key的一些关键步骤0
     }
   }
 }
@@ -39,6 +38,5 @@ export const getServerSideConfig = () => {
     needCode: ACCESS_CODES.size > 0,
     proxyUrl: process.env.PROXY_URL,
     isVercel: !!process.env.VERCEL,
-    hideUserApiKey: !!process.env.HIDE_USER_API_KEY, //可能是作者隐藏用户自行填入API key的一些关键步骤2
   };
 };
