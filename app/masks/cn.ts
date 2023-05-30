@@ -36,7 +36,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
       {
         role: "assistant",
-        content: "我是威廉爱德华兹戴明，请说你的问题",
+        content: "你好，我是威廉爱德华兹戴明，请说你的问题",
         date: "",
       },
     ],
