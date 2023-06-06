@@ -114,7 +114,7 @@ export const CN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f4da",
-    name: "《升级定位》",
+    name: "《升级定位》EN",
     context: [
       {
         role: "system",
