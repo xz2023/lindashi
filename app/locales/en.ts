@@ -11,7 +11,7 @@ const en: LocaleType = {
     ChatItemCount: (count: number) => `${count} messages`,
   },
   Chat: {
-    SubTitle: (count: number) => `${count} messages with 芒格学院`,
+    SubTitle: (count: number) => `${count} messages with Chat Book`,
     Actions: {
       ChatList: "Go To Chat List",
       CompressedHistory: "Compressed History Memory Prompt",
@@ -41,7 +41,7 @@ const en: LocaleType = {
     Copy: "Copy All",
     Download: "Download",
     MessageFromYou: "Message From You",
-    MessageFromChatGPT: "Message From 芒格学院",
+    MessageFromChatGPT: "Message From Chat Book",
   },
   Memory: {
     Title: "Memory Prompt",
@@ -136,13 +136,13 @@ const en: LocaleType = {
       Placeholder: "OpenAI API Key",
     },
     Usage: {
-      Title:"", //"Account Balance",
+      Title: "", //"Account Balance",
       SubTitle(used: any, total: any) {
-        return ''; //`Used this month $${used}, subscription $${total}`;
+        return ""; //`Used this month $${used}, subscription $${total}`;
       },
-      IsChecking:"", //"Checking...",
-      Check: "",  //"Check",
-      NoAccess: "",  //"Enter API Key to check balance",
+      IsChecking: "", //"Checking...",
+      Check: "", //"Check",
+      NoAccess: "", //"Enter API Key to check balance",
     },
     AccessCode: {
       Title: "Access Code",

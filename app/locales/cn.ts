@@ -10,7 +10,7 @@ const cn = {
     ChatItemCount: (count: number) => `${count} 条对话`,
   },
   Chat: {
-    SubTitle: (count: number) => `与 芒格学院 的 ${count} 条对话`,  //跟用户互动的网站/工具的名称
+    SubTitle: (count: number) => `与 Chat Book 的 ${count} 条对话`, //跟用户互动的网站/工具的名称
     Actions: {
       ChatList: "查看消息列表",
       CompressedHistory: "查看压缩后的历史 Prompt",
@@ -40,7 +40,7 @@ const cn = {
     Copy: "全部复制",
     Download: "下载文件",
     MessageFromYou: "来自你的消息",
-    MessageFromChatGPT: "来自 芒格学院 的消息", //这个也是需要改动
+    MessageFromChatGPT: "来自 Chat Book 的消息", //这个也是需要改动
   },
   Memory: {
     Title: "历史摘要",
@@ -137,9 +137,9 @@ const cn = {
     Usage: {
       Title: "", //"余额查询",
       SubTitle(used: any, total: any) {
-        return '';  //`本月已使用 $${used}，订阅总额 $${total}`;
+        return ""; //`本月已使用 $${used}，订阅总额 $${total}`;
       },
-      IsChecking: "",  //"正在检查…",
+      IsChecking: "", //"正在检查…",
       Check: "", //"重新检查",
       NoAccess: "", //输入 API Key 或访问密码查看余额",
     },

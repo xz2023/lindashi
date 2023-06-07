@@ -96,9 +96,9 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>芒格学院</div>
+        <div className={styles["sidebar-title"]}>Chat Book</div>
         <div className={styles["sidebar-sub-title"]}>
-          认知树——打造属于你的多元思维模型.
+          AI图书馆:探索智能化阅读时代,从此你的智能阅读之路不再孤单.
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
